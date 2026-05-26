@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   loadHeader();
   initExperienceCounter();
+  initAccordion();
 });
 
 /**
@@ -57,4 +58,26 @@ function initExperienceCounter() {
       clearInterval(counterTimer);
     }
   }, 1000 / frameRate);
+}
+
+/**
+ * Initializes interactive accordion elements on the course details page.
+ */
+function initAccordion() {
+  const headers = document.querySelectorAll('.accordion-header');
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      const isActive = item.classList.contains('active');
+
+      // Close other open accordion items for a premium cohesive feel
+      document.querySelectorAll('.accordion-item').forEach(otherItem => {
+        otherItem.classList.remove('active');
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
 }
