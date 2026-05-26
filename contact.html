@@ -1,151 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link rel="stylesheet" href="contact.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | POIE</title>
+    <meta name="description"
+        content="Get in touch with our team. Admissions inquiry, locations, contact numbers, and campus details for Pearson BTEC.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="course.css">
 </head>
+
 <body>
 
-  <section class="contact-page">
-    <div class="container">
+    <!-- Premium Sticky Header Placeholder -->
+    <!-- <div id="header-placeholder"></div> -->
 
-      <!-- Breadcrumb -->
-      <div class="breadcrumb">
-        <a href="#">Home</a>
-        <span>/</span>
-        <a href="#" class="active">Contact Us</a>
-      </div>
+    <!-- Main Course Page Wrapper -->
+    <div class="course-page-wrapper">
 
-      <!-- Heading -->
-      <h1>CONTACT <span>US</span></h1>
-
-      <p class="intro-text">
-        Applicants seeking admission to the Extended Diploma programme must meet the academic and eligibility criteria
-        set by the institution. The programme is designed for students who are passionate about business,
-        management, and professional development.
-      </p>
-
-      <!-- Contact Form + Course Card -->
-      <div class="top-section">
-
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <input type="text" placeholder="John" required />
-            <input type="text" placeholder="Last Name*" required />
-          </div>
-
-          <input type="email" placeholder="Email*" required />
-          <input type="tel" placeholder="Phone Number*" required />
-
-          <textarea placeholder="Your message..." rows="5"></textarea>
-
-          <button type="submit">Send Message</button>
-
-          <p class="success-msg" id="successMsg"></p>
-        </form>
-
-        <div class="course-card">
-          <div class="card-icon">
-            <svg width="42" height="42" viewBox="0 0 64 64" fill="none">
-              <path d="M6 22L32 10L58 22L32 34L6 22Z" stroke="#1a2b57" stroke-width="3"/>
-              <path d="M18 28V39C18 45 24 49 32 49C40 49 46 45 46 39V28" stroke="#1a2b57" stroke-width="3"/>
-              <path d="M54 24V39" stroke="#1a2b57" stroke-width="3"/>
-              <circle cx="54" cy="43" r="3" stroke="#1a2b57" stroke-width="3"/>
-            </svg>
-          </div>
-
-          <h2>Your Future in<br>Business Starts Here</h2>
-
-          <h3>
-            Pearson BTEC International<br>
-            Level 5<br>
-            Extended Diploma in<br>
-            Business
-          </h3>
-
-          <p>
-            Gain the skills, knowledge and confidence to succeed in top global organizations.
-          </p>
-
-          <a href="#" class="apply-btn">
-            Apply <span>→</span>
-          </a>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="index.html">Home</a> / <span class="current">Contact Us</span>
         </div>
 
-      </div>
+        <!-- Page Header Title Section -->
+        <div class="course-header">
+            <h1 class="course-title">Contact <span class="text-blue">Us</span></h1>
+            <p class="course-description">
+                Applicants seeking admission to the Extended Diploma programme must meet the academic and eligibility criteria
+                set by the institution. The programme is designed for students who are passionate about business,
+                management, and professional development.
+            </p>
+        </div>
 
-      <!-- Find Us -->
-      <section class="find-section">
-        <h2>Find us</h2>
+        <!-- Contact Form + Course Card Grid -->
+        <div class="contact-grid">
 
-        <p class="find-text">
-          Visit our campus at Ras Al Khaimah Academic Zone, conveniently located in Al Dhait South,
-          United Arab Emirates.
-        </p>
-
-        <div class="map-box">
-
-          <iframe
-            src="https://www.google.com/maps?q=Ras%20Al%20Khaimah%20United%20Arab%20Emirates&output=embed"
-            loading="lazy">
-          </iframe>
-
-          <div class="map-info-card">
-            <div class="map-icon">⌖</div>
-
-            <div>
-              <h4>Pearson BTEC - RAK Centre</h4>
-              <p>RAKEZ Academic Zone, Al Dhait South,<br>Ras Al Khaimah, UAE</p>
-              <a href="#">Get Directions →</a>
+            <!-- Left Form Container -->
+            <div class="contact-form-container">
+                <form class="lead-form" id="contactForm" action="#" method="POST">
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <input type="text" id="first-name" name="first_name" placeholder="First Name*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="last-name" name="last_name" placeholder="Last Name*" required>
+                        </div>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number*" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-form-btn">Send Message</button>
+                    <p class="success-msg" id="successMsg" style="margin-top: 15px; font-family: var(--font-body); font-weight: 600; color: #008cc9;"></p>
+                </form>
             </div>
-          </div>
 
-          <div class="zoom-box">
-            <button>+</button>
-            <button>-</button>
-          </div>
+            <!-- Right Course Card -->
+            <div class="contact-course-card">
+                <div class="course-feature-icon" style="width: 48px; height: 48px;">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dark-navy);">
+                        <path d="M6 22l26-10 26 10-26 10z" />
+                        <path d="M14 25v15c0 6 8 8 18 8s18-2 18-8V25" />
+                        <path d="M50 22v14l3-2 3 2V22" />
+                    </svg>
+                </div>
 
-        </div>
+                <h2>Your Future in<br>Business Starts Here</h2>
 
-        <!-- Info Cards -->
-        <div class="info-grid">
+                <h3>
+                    Pearson BTEC International<br>
+                    Level 5 Extended Diploma<br>
+                    in Business
+                </h3>
 
-          <div class="info-card pink">
-            <div class="info-icon location-icon">
-        <i class="fa-solid fa-location-dot"></i>
-        </div>
-            <h3>Our Address</h3>
-            <p>PO Box 24210 RAK, Al Qusaidat,<br>Ras Al Khaimah, United Arab Emirates</p>
-          </div>
+                <p>
+                    Gain the skills, knowledge and confidence to succeed in top global organizations.
+                </p>
 
-          <div class="info-card yellow">
-            <div class="info-icon">☎</div>
-            <h3>Call Us</h3>
-            <p>+971 000 000 000<br>+971 72 123 500</p>
-          </div>
-
-          <div class="info-card green">
-            <div class="info-icon">✉</div>
-            <h3>Email Us</h3>
-            <p>info@example.com<br>admissions@example.com</p>
-          </div>
-
-          <div class="info-card rose">
-            <div class="info-icon">◷</div>
-            <h3>Working Hours</h3>
-            <p>Mon - Sat<br>9:00 AM - 6:00 PM</p>
-          </div>
+                <a href="admission-process.html" class="btn-apply">
+                    <span>Apply</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; margin-left: 8px;">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
 
         </div>
-      </section>
+
+        <!-- Find Us -->
+        <section class="find-section">
+            <h2 class="section-title">Find Us</h2>
+            <p class="find-text">
+                Visit our campus at Ras Al Khaimah Academic Zone, conveniently located in Al Dhait South, United Arab Emirates.
+            </p>
+
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps?q=Ras%20Al%20Khaimah%20United%20Arab%20Emirates&output=embed"
+                    loading="lazy">
+                </iframe>
+
+                <div class="map-info-card">
+                    <div class="map-info-icon">⌖</div>
+                    <div class="map-info-details">
+                        <h4>Pearson BTEC - RAK Centre</h4>
+                        <p>RAKEZ Academic Zone, Al Dhait South,<br>Ras Al Khaimah, UAE</p>
+                        <a href="https://maps.google.com/?q=Ras+Al+Khaimah+Academic+Zone" target="_blank">Get Directions →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Information Cards Deck -->
+        <section class="course-features-section" style="margin-bottom: 0;">
+            <div class="course-features-grid">
+                
+                <!-- Card 1: Our Address -->
+                <div class="course-feature-card feature-card-1">
+                    <div class="course-feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h4 class="course-feature-title">Our Address</h4>
+                    <p class="course-feature-desc" style="font-size: 0.9rem; line-height: 1.6;">
+                        PO Box 24210 RAK, Al Qusaidat,<br>Ras Al Khaimah, UAE
+                    </p>
+                </div>
+
+                <!-- Card 2: Call Us -->
+                <div class="course-feature-card feature-card-2">
+                    <div class="course-feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="course-feature-title">Call Us</h4>
+                    <p class="course-feature-desc" style="font-size: 0.9rem; line-height: 1.6;">
+                        +971 000 000 000<br>+971 72 123 500
+                    </p>
+                </div>
+
+                <!-- Card 3: Email Us -->
+                <div class="course-feature-card feature-card-3">
+                    <div class="course-feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h4 class="course-feature-title">Email Us</h4>
+                    <p class="course-feature-desc" style="font-size: 0.9rem; line-height: 1.6;">
+                        info@example.com<br>admissions@example.com
+                    </p>
+                </div>
+
+                <!-- Card 4: Working Hours -->
+                <div class="course-feature-card feature-card-4">
+                    <div class="course-feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h4 class="course-feature-title">Working Hours</h4>
+                    <p class="course-feature-desc" style="font-size: 0.9rem; line-height: 1.6;">
+                        Mon - Sat<br>9:00 AM - 6:00 PM
+                    </p>
+                </div>
+
+            </div>
+        </section>
 
     </div>
-  </section>
 
-  <script src="contact.js"></script>
+    <!-- Scripts -->
+    <script src="contact.js"></script>
 </body>
+
 </html>
