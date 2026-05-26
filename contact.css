@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  color: #333;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.container {
+  width: 88%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.contact-page {
+  padding: 14px 0 35px;
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.breadcrumb a {
+  color: #687384;
+  text-decoration: none;
+}
+
+.breadcrumb .active {
+  color: #009fe3;
+}
+
+/* Heading */
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 56px;
+  line-height: 1;
+  color: #444444;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+h1 span {
+  color: #009fe3;
+}
+
+.intro-text {
+  font-size: 11.5px;
+  color: #5e6673;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Top Contact Area */
+
+.top-section {
+  display: grid;
+  grid-template-columns: 1fr 310px;
+  gap: 44px;
+  align-items: stretch;
+}
+
+.contact-form {
+  background: #ffffff;
+  padding: 32px 36px 28px;
+  border-radius: 3px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #b9b9b9;
+  border-radius: 4px;
+  padding: 11px 14px;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-family: inherit;
+  outline: none;
+  color: #333;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 102px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00a9e0;
+  box-shadow: 0 0 0 1px #00a9e0;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form button {
+  width: 100%;
+  height: 34px;
+  border: none;
+  border-radius: 20px;
+  background: #07a9df;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #008fc0;
+}
+
+.success-msg {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #008c72;
+}
+
+/* Course Card */
+
+.course-card {
+  border: 1px solid #cfcfcf;
+  padding: 23px 34px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-icon {
+  margin-bottom: 8px;
+}
+
+.course-card h2 {
+  font-size: 17px;
+  line-height: 1.08;
+  color: #00796b;
+  font-weight: 800;
+  margin-bottom: 58px;
+}
+
+.course-card h3 {
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: #000;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.course-card p {
+  font-size: 10.5px;
+  line-height: 1.25;
+  color: #111;
+  margin-bottom: auto;
+}
+
+.apply-btn {
+  width: 150px;
+  height: 28px;
+  border: 1px solid #c2c2c2;
+  margin-top: 44px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Find Us */
+
+.find-section {
+  margin-top: 36px;
+}
+
+.find-section h2 {
+  font-size: 31px;
+  line-height: 1;
+  color: #111;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.find-text {
+  font-size: 11.5px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.map-box {
+  height: 252px;
+  position: relative;
+  border: 1px solid #c9c9c9;
+  overflow: hidden;
+  background: #eeeeee;
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(100%);
+}
+
+.map-info-card {
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  width: 320px;
+  background: #ffffff;
+  padding: 16px 18px;
+  display: flex;
+  gap: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.map-icon {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #9a9a9a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.map-info-card h4 {
+  font-size: 11px;
+  color: #222;
+  margin-bottom: 5px;
+  font-weight: 800;
+}
+
+.map-info-card p {
+  font-size: 10px;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.map-info-card a {
+  font-size: 10px;
+  color: #111;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.zoom-box {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  display: grid;
+}
+
+.zoom-box button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #bbb;
+  background: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Info Cards */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.info-card {
+  min-height: 150px;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 12px 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::after {
+  content: "";
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  position: absolute;
+  right: -28px;
+  bottom: -35px;
+}
+
+.info-icon {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.info-card h3 {
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+
+.info-card p {
+  font-size: 9.5px;
+  line-height: 1.35;
+}
+
+.pink {
+  background: #d92672;
+}
+
+.yellow {
+  background: #f2cc09;
+}
+
+.green {
+  background: #008f86;
+}
+
+.rose {
+  background: #c73267;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .top-section {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    max-width: 350px;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .course-card h2 {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-form {
+    padding: 24px 20px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-info-card {
+    width: calc(100% - 40px);
+    left: 20px;
+  }
+
+  .map-box {
+    height: 300px;
+  }
+}
