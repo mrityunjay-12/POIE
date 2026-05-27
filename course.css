@@ -1039,3 +1039,239 @@
     height: 320px;
   }
 }
+/* Benefits Cards Section */
+.benefit-cards-section {
+    margin: 35px 0 50px;
+}
+
+.mature-entry-note {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.benefit-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.benefit-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 160px;
+    padding: 28px 22px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.benefit-card::after {
+    content: "";
+    position: absolute;
+    right: -25px;
+    bottom: -25px;
+    width: 110px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+}
+
+.benefit-card::before {
+    content: "";
+    position: absolute;
+    right: 35px;
+    bottom: 25px;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+}
+
+.benefit-icon {
+    font-size: 24px;
+    margin-bottom: 14px;
+}
+
+.benefit-card h4 {
+    font-size: 17px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.benefit-card p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.bg-pink {
+    background: #d63384;
+}
+
+.bg-yellow {
+    background: #f2c400;
+}
+
+.bg-teal {
+    background: #00897b;
+}
+
+@media (max-width: 992px) {
+    .benefit-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .benefit-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.programme-guidance-strip {
+    margin: 35px 0 55px;
+}
+
+.programme-guidance-container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 24px;
+    border-radius: 4px;
+}
+
+.programme-guidance-icon {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    border: 2px solid #3a3a3a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3a3a3a;
+}
+
+.programme-guidance-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.programme-guidance-text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .programme-guidance-container {
+        align-items: flex-start;
+        padding: 18px;
+    }
+
+    .programme-guidance-text {
+        font-size: 14px;
+    }
+}
+/* Course Outline Documents Section */
+
+.outline-documents-section {
+    padding: 50px 0 70px;
+}
+
+.outline-documents-title {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: #121212;
+}
+
+.outline-documents-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.outline-doc-card {
+    text-align: center;
+}
+
+.outline-doc-icon {
+    height: 140px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 14px;
+}
+
+.outline-doc-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+.outline-doc-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+.outline-doc-card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+}
+
+/* Card Colors */
+
+.yellow-card .outline-doc-icon {
+    background: #e4c100;
+}
+
+.teal-card .outline-doc-icon {
+    background: #00796b;
+}
+
+.pink-card .outline-doc-icon {
+    background: linear-gradient(135deg, #e84393, #c2185b);
+}
+
+.yellow-card h4 {
+    color: #c49b00;
+}
+
+.teal-card h4 {
+    color: #00796b;
+}
+
+.pink-card h4 {
+    color: #d63384;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+    .outline-documents-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .outline-documents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .outline-documents-title {
+        font-size: 34px;
+    }
+}
+.course-outline-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
