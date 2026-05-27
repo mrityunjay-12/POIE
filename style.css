@@ -1922,3 +1922,342 @@ nav ul li a:hover {
     padding: 16px 24px;
   }
 }
+/* =====================================================
+   ABOUT PEARSON BTEC PAGE
+===================================================== */
+
+/* Main page spacing */
+.btec-page {
+  padding-top: 95px;
+  background: #ffffff;
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.btec-hero {
+  padding: 40px 8%;
+  margin-bottom: -50px;
+}
+
+/* Main Heading */
+.btec-hero h1 {
+  font-family: var(--font-headings);
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--dark-navy);
+  line-height: 1.1;
+}
+
+/* Blue Text */
+.btec-hero h1 span {
+  color: var(--primary-blue);
+}
+
+/* Description */
+.btec-hero p {
+  margin-top: 14px;
+  max-width: 850px;
+  color: var(--light-slate);
+}
+
+
+/* =====================================================
+   ABOUT + PINK CARD SECTION
+===================================================== */
+
+.btec-info-section {
+  padding: 20px 8%;
+  display: grid;
+
+  /* 2 Column Layout */
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 35px;
+  align-items: center;
+}
+
+/* Left Content */
+.btec-info-left h2 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.btec-info-left p {
+  color: var(--light-slate);
+}
+
+.btec-info-left ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.btec-info-left ul li {
+  margin-bottom: 10px;
+  color: var(--light-slate);
+}
+
+
+/* Pink Card */
+.btec-superiority-card {
+  background: linear-gradient(135deg, #ec3b83 0%, #c2185b 100%);
+
+  color: white;
+
+  border-radius: 18px;
+
+  padding: 60px 50px;
+
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-shadow: var(--card-shadow);
+}
+
+/* Large Number */
+.btec-num {
+  font-size: 90px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+
+/* =====================================================
+   YELLOW SECTION
+===================================================== */
+
+.btec-yellow-block {
+  padding:  20px 8%;
+  margin-top: -60px;
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  min-height: 320px;
+  
+
+  gap: 30px;
+  align-items: center;
+}
+
+/* Yellow Card */
+.btec-yellow-card {
+  background: #f5c400;
+
+  padding: 60px 50px;
+
+  border-radius: 16px;
+
+  color: var(--dark-navy);
+
+  box-shadow: var(--card-shadow);
+}
+
+
+/* =====================================================
+   COURSE OUTLINE
+===================================================== */
+
+.btec-course-outline {
+  padding: 30px 8%;
+}
+
+.btec-course-outline h2 {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* Grid Layout */
+.btec-outline-grid {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+/* Individual Cards */
+.btec-outline-card {
+  padding: 28px 22px;
+
+  border-radius: 16px;
+
+  color: white;
+
+  min-height: 140px;
+
+  box-shadow: var(--card-shadow);
+}
+
+/* Card Title */
+.btec-outline-card h4 {
+  margin-bottom: 10px;
+}
+
+/* Card Description */
+.btec-outline-card p {
+  color: rgba(255,255,255,0.9);
+}
+
+
+/* =====================================================
+   DISCOVER COURSES
+===================================================== */
+
+.btec-discover {
+  padding: 30px 8%;
+}
+
+/* 3 Column Grid */
+.btec-course-grid {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+/* Course Card */
+.btec-course-card {
+  min-height: 140px;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  display: flex;
+  align-items: flex-end;
+
+  font-weight: 700;
+
+  box-shadow: var(--card-shadow);
+}
+
+
+/* =====================================================
+   FULL WIDTH BANNER
+===================================================== */
+
+.btec-banner {
+
+  margin-top: 35px;
+
+  padding: 90px 8%;
+
+  text-align: center;
+
+  color: white;
+
+  background:
+    linear-gradient(rgba(21,28,45,0.78),
+    rgba(21,28,45,0.78)),
+    url("assets/offers_bg.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.btec-banner h2 {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
+
+.contact-section-btec {
+  padding: 40px 8%;
+}
+
+/* Grid */
+.contact-grid-btec {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+/* Contact Card */
+.contact-mini-card {
+  padding: 25px;
+
+  border-radius: 16px;
+
+  color: white;
+
+  text-align: center;
+
+  min-height: 120px;
+
+  box-shadow: var(--card-shadow);
+}
+
+
+/* =====================================================
+   COMMON COLORS
+===================================================== */
+
+.teal {
+  background: #078f80;
+}
+
+.pink {
+  background: #cf2b78;
+}
+
+.yellow {
+  background: #f5c400;
+  color: var(--dark-navy);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 992px) {
+
+  .btec-info-section,
+  .btec-yellow-block {
+    grid-template-columns: 1fr;
+  }
+
+  .btec-outline-grid,
+  .contact-grid-btec {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btec-course-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .btec-hero h1 {
+    font-size: 30px;
+  }
+
+  .btec-outline-grid,
+  .contact-grid-btec {
+    grid-template-columns: 1fr;
+  }
+
+  .btec-num {
+    font-size: 65px;
+  }
+}
