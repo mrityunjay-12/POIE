@@ -43,23 +43,26 @@ body {
 
 /* Header / Navigation */
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 24px 8%;
+  padding: 16px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
-  background: transparent;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-top: 5px solid #ff4c8b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
 .logo {
   font-family: var(--font-headings);
-  font-weight: 900;
-  font-size: 1.5rem;
-  letter-spacing: 1.5px;
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: -0.5px;
   color: var(--dark-navy);
   text-decoration: none;
   display: flex;
@@ -67,58 +70,53 @@ header {
   gap: 8px;
 }
 
-.logo span {
-  color: var(--primary-blue);
+.hamburger-icon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--dark-navy);
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 4px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 32px;
+  align-items: center;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: var(--dark-navy);
+  color: var(--light-slate);
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.95rem;
   transition: color 0.3s ease;
-  position: relative;
-}
-
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary-blue);
-  transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
 }
 
 nav ul li a:hover {
-  color: var(--primary-blue);
+  color: var(--dark-navy);
 }
 
 .header-cta {
   text-decoration: none;
-  color: var(--primary-blue);
-  border: 2px solid var(--primary-blue);
-  padding: 8px 20px;
-  border-radius: 0;
+  background-color: var(--primary-blue);
+  color: #ffffff !important;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(0, 162, 232, 0.2);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .header-cta:hover {
-  background-color: var(--primary-blue);
-  color: white;
+  background-color: var(--primary-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 162, 232, 0.3);
 }
 
 /* Main Hero Section */
@@ -1425,6 +1423,14 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   background-color: #ffffff;
+}
+
+.form-title {
+  font-family: var(--font-headings);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin-bottom: 25px;
 }
 
 .lead-form {
