@@ -1308,10 +1308,29 @@
   padding-left: 30px;
 }
 
+.poie-overview-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .poie-overview-right li {
+  position: relative;
+  padding-left: 24px;
   font-size: 12.5px;
   line-height: 1.55;
   margin-bottom: 11px;
+  color: var(--light-slate);
+}
+
+.poie-overview-right li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #078f80;
+  font-weight: bold;
+  font-size: 13px;
 }
 
 /* BTEC yellow section below overview */
@@ -1378,6 +1397,8 @@
     position: absolute;
     left: 0;
     top: 0;
+    color: #078f80;
+    font-weight: bold;
 }
 /* Visa/About Yellow Card Override */
 
@@ -1475,8 +1496,11 @@
 
 .visa-process-arrow {
   text-align: center;
-  color: var(--dark-navy);
-  font-size: 16px;
+  color: #dfe4ea;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -1564,6 +1588,18 @@
 
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .btec-yellow-block {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+  }
+
+  .btec-yellow-card {
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 992px) {
   .visa-process-grid {
     grid-template-columns: 1fr;
@@ -1572,6 +1608,7 @@
 
   .visa-process-arrow {
     transform: rotate(90deg);
+    margin: 10px 0;
   }
 
   .attestation-grid {

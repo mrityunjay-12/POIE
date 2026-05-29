@@ -2371,37 +2371,85 @@ nav ul li a:hover {
   gap: 18px;
 }
 
-/* Contact Card */
+/* /* Contact Card */
 .contact-mini-card {
-  padding: 25px;
-
+  padding: 35px 25px;
   border-radius: 16px;
-
   color: white;
-
   text-align: center;
-
-  min-height: 120px;
-
+  min-height: 180px;
+  position: relative;
+  overflow: hidden;
   box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-mini-card::after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  bottom: -35px;
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  z-index: 1;
+}
+
+.contact-mini-card::before {
+  content: "";
+  position: absolute;
+  right: 38px;
+  bottom: 30px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  z-index: 1;
+}
+
+.contact-mini-card .contact-icon-circle,
+.contact-mini-card h3,
+.contact-mini-card p {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-icon-circle {
+  width: 54px;
+  height: 54px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.contact-icon-circle i {
+  font-size: 22px;
 }
 
 
 /* =====================================================
    COMMON COLORS
-===================================================== */
+ ===================================================== */
 
 .teal {
-  background: #078f80;
+  background: linear-gradient(135deg, #0f8f83 0%, #054d48 100%);
 }
 
 .pink {
-  background: #cf2b78;
+  background: linear-gradient(135deg, #f0438c 0%, #a82964 100%);
 }
 
 .yellow {
-  background: #f5c400;
-  color: var(--dark-navy);
+  background: linear-gradient(135deg, #ffd800 0%, #b69600 100%);
+  color: #ffffff;
 }
 
 
