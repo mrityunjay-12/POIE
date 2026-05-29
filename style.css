@@ -242,6 +242,25 @@ nav ul li a:hover {
   object-position: center 15%;
 }
 
+/* =====================================================
+   GLOBAL CONTAINER WIDTH CONSTRAINT & ALIGNMENT
+===================================================== */
+.cards-container,
+.excellence-container,
+.entry-cards-container,
+.timeline-container,
+.services-deck-container,
+.pathways-deck-container,
+.about-program-container,
+.admissions-flow-container,
+.news-blog-container,
+.journey-form-container,
+.footer-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 /* Overlapping Cards Section */
 .cards-section {
   position: relative;
@@ -403,9 +422,9 @@ nav ul li a:hover {
 }
 
 .excellence-card {
-  background: linear-gradient(135deg, #ec3b83 0%, #a82062 100%);
+  background: url('assets/Group 296.png') no-repeat right -250px top -40px / 140% auto, linear-gradient(135deg, #ec3b83 0%, #a82062 100%);
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
   padding: 56px 40px 48px 40px;
   border-radius: 16px;
   /* High fidelity exact rounded corner */
@@ -415,7 +434,8 @@ nav ul li a:hover {
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
+  overflow: hidden;
 }
 
 .card-hero-num {
@@ -875,62 +895,66 @@ nav ul li a:hover {
   stroke: #ffffff;
 }
 
-/* Card 2 Business/IT Stack Specifics */
-.pathway-card.bg-yellow {
-  background-color: #eeb902;
-  color: var(--dark-navy);
-  display: flex;
-  justify-content: center;
-}
-
-.pathway-pill-list {
+/* Card 2 Business/IT Stack Specifics - Double Stacked Cards */
+.pathways-center-column {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
+  height: 100%;
   width: 100%;
 }
 
-.pathway-pill {
+.pathway-sub-card {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: 16px;
-  border: 1px solid var(--dark-navy);
-  padding: 16px 20px;
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  justify-content: space-between;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: #eeb902; /* Solid primary yellow matches other BTEC pages */
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
   width: 100%;
+  box-shadow: 0 15px 35px rgba(21, 28, 45, 0.05);
 }
 
-.pathway-pill:hover {
-  background-color: var(--dark-navy);
+.pathway-sub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(21, 28, 45, 0.15);
+}
+
+.pathway-sub-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.pathway-sub-icon {
+  width: 42px;
+  height: 42px;
+  stroke: #ffffff;
+  flex-shrink: 0;
+}
+
+.pathway-sub-title {
+  font-family: var(--font-headings), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: #ffffff;
+  line-height: 1.35;
+  text-align: left;
 }
 
-.pill-icon {
+.pathway-arrow-icon {
   width: 24px;
   height: 24px;
-  stroke: var(--dark-navy);
-  flex-shrink: 0;
-  transition: stroke 0.3s ease;
-}
-
-.pathway-pill:hover .pill-icon {
   stroke: #ffffff;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
-.pill-text {
-  font-family: var(--font-headings);
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--dark-navy);
-  text-align: left;
-  transition: color 0.3s ease;
-}
-
-.pathway-pill:hover .pill-text {
-  color: #ffffff;
+.pathway-sub-card:hover .pathway-arrow-icon {
+  transform: translate(3px, -3px);
 }
 
 /* Card 3 Skills Based Education Specifics */
@@ -1856,6 +1880,19 @@ nav ul li a:hover {
     padding: 36px 24px;
   }
 
+  .pathway-sub-card {
+    padding: 30px 20px;
+  }
+
+  .pathway-sub-title {
+    font-size: 1.05rem;
+  }
+
+  .pathway-sub-icon {
+    width: 32px;
+    height: 32px;
+  }
+
   .section-heading {
     font-size: 1.8rem;
     margin-bottom: 36px;
@@ -2259,5 +2296,193 @@ nav ul li a:hover {
 
   .btec-num {
     font-size: 65px;
+  }
+}
+
+/* =====================================================
+   SITE FOOTER (PREMIUM DARK AESTHETIC)
+===================================================== */
+.site-footer {
+  background-color: #111318;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: var(--font-body), sans-serif;
+  padding: 80px 0 0 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px 20px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+  gap: 48px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.branding-col .branding-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.contact-item i {
+  color: var(--primary-blue, #00a2e8);
+  font-size: 0.95rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.social-link:hover {
+  background-color: var(--primary-blue, #00a2e8);
+  border-color: var(--primary-blue, #00a2e8);
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+.footer-title {
+  font-family: var(--font-headings), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.12);
+  width: 100%;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  padding-left: 6px;
+}
+
+.posts-col .footer-post {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.posts-col .footer-post:last-child {
+  margin-bottom: 0;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  margin-bottom: 6px;
+}
+
+.post-meta i {
+  font-size: 0.8rem;
+}
+
+.post-title {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.45;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.post-title:hover {
+  color: var(--primary-blue, #00a2e8);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+/* Footer Responsive styles */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-bottom: 40px;
+  }
+  
+  .footer-title {
+    margin-bottom: 16px;
   }
 }

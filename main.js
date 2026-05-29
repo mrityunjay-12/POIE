@@ -4,10 +4,11 @@
  */
 
 // Paste your Google Apps Script Web App URL here to connect to Google Sheets
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzjhEQtMIig0u8OJbiwvQlIV6OKYRfpfU_FsJMUidSuoQ7C3NuMAerc7EDZBvnWVbwH-Q/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwRs_PvtErItoiEJMFJKBx-eLUpolrk4OVPgkzdEiD8FI1D31SOab2VROlzZVzt0y2IAA/exec";
 
 document.addEventListener('DOMContentLoaded', () => {
   loadHeader();
+  loadFooter();
   initExperienceCounter();
   initAccordion();
   initApplyForm();
@@ -29,6 +30,24 @@ function loadHeader() {
       placeholder.innerHTML = html;
     })
     .catch(error => console.error('Error loading header:', error));
+}
+
+/**
+ * Loads the modular footer component from footer.html dynamically
+ */
+function loadFooter() {
+  const placeholder = document.getElementById('footer-placeholder');
+  if (!placeholder) return;
+
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Footer file not found');
+      return response.text();
+    })
+    .then(html => {
+      placeholder.innerHTML = html;
+    })
+    .catch(error => console.error('Error loading footer:', error));
 }
 
 /**

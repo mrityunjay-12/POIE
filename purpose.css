@@ -1,0 +1,1024 @@
+/* 
+   SPOXTALE POIE - 'Your Future. Our Purpose.' Premium Stylesheet
+   Design system utilizing CSS custom properties, responsive grids, HSL curated colors, and modern card overlays.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --primary-blue: #00a2e8;
+    --primary-blue-hover: #008cc9;
+    --dark-navy: #151c2d;
+    --light-slate: #60687a;
+    --border-cyan: #5cd0d3;
+    
+    /* Custom brand HSL palettes */
+    --color-pink-start: #ec3b83;
+    --color-pink-end: #a82062;
+    --color-pink-dark-start: #be185d;
+    --color-pink-dark-end: #9d174d;
+    --color-yellow-start: #ffd700;
+    --color-yellow-end: #eeb902;
+    --color-teal-start: #1aa495;
+    --color-teal-end: #0e7066;
+
+    /* Typography */
+    --font-headings: 'Montserrat', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+}
+
+/* Reset and Base Layout Setup */
+.purpose-page {
+    font-family: var(--font-body);
+    background-color: #ffffff;
+    color: var(--dark-navy);
+    line-height: 1.6;
+    margin-top: 100px; /* Offset to clear the sticky header perfectly */
+    overflow-x: hidden;
+}
+
+.cyan-text {
+    color: var(--primary-blue);
+}
+
+/* Common Section Width Restrictions */
+.purpose-hero-container,
+.split-info-container,
+.btec-overview-container,
+.virtual-tour-container,
+.stats-strip-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   1. HERO HEADER SECTION
+   ========================================================================== */
+.purpose-hero {
+    padding: 30px 8% 20px 8%;
+}
+
+.purpose-hero-container .breadcrumb {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 13px;
+    color: var(--light-slate);
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.purpose-hero-container .breadcrumb a {
+    text-decoration: none;
+    color: var(--light-slate);
+    transition: color 0.2s ease;
+}
+
+.purpose-hero-container .breadcrumb a:hover {
+    color: var(--dark-navy);
+}
+
+.purpose-hero-title {
+    font-family: var(--font-headings);
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+    color: var(--dark-navy);
+}
+
+.purpose-hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--light-slate);
+    max-width: 800px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   2. SPLIT INFO SECTION
+   ========================================================================== */
+.split-info-section {
+    padding: 60px 8%;
+}
+
+.split-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Left side: Heading & Description */
+.split-info-left .section-title {
+    font-family: var(--font-headings);
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--dark-navy);
+    margin-bottom: 24px;
+}
+
+.split-info-left .section-desc {
+    font-size: 1.05rem;
+    color: var(--light-slate);
+    line-height: 1.8;
+    max-width: 580px;
+}
+
+/* Right side: 2x2 colored cards grid */
+.split-info-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Mini Card layout */
+.mini-grid-card {
+    border-radius: 12px;
+    padding: 32px 24px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(21, 28, 45, 0.05);
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.mini-grid-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(21, 28, 45, 0.12);
+}
+
+/* Curved dynamic backgrounds via CSS overlays */
+.mini-grid-card::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    width: 130px;
+    height: 130px;
+    top: -40px;
+    right: -40px;
+    pointer-events: none;
+}
+
+.mini-grid-card::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    width: 80px;
+    height: 80px;
+    bottom: -20px;
+    left: -20px;
+    pointer-events: none;
+}
+
+.card-icon-mini {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.mini-grid-card h3 {
+    font-family: var(--font-headings);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.mini-grid-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    font-weight: 350;
+}
+
+/* Brand Card Backgrounds */
+.mini-grid-card.bg-pink {
+    background: linear-gradient(135deg, var(--color-pink-start) 0%, var(--color-pink-end) 100%);
+}
+
+.mini-grid-card.bg-yellow {
+    background: linear-gradient(135deg, var(--color-yellow-start) 0%, var(--color-yellow-end) 100%);
+}
+
+.mini-grid-card.bg-teal {
+    background: linear-gradient(135deg, var(--color-teal-start) 0%, var(--color-teal-end) 100%);
+}
+
+.mini-grid-card.bg-pink-dark {
+    background: linear-gradient(135deg, var(--color-pink-dark-start) 0%, var(--color-pink-dark-end) 100%);
+}
+
+/* Contrast adjustment for readability on Yellow Card */
+.mini-grid-card.bg-yellow {
+    color: var(--dark-navy);
+}
+
+.mini-grid-card.bg-yellow .card-icon-mini {
+    color: var(--dark-navy);
+}
+
+.mini-grid-card.bg-yellow::before,
+.mini-grid-card.bg-yellow::after {
+    background: rgba(21, 28, 45, 0.06);
+}
+
+.mini-grid-card.bg-yellow p {
+    color: rgba(21, 28, 45, 0.85);
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   3. WHAT IS PEARSON BTEC? SECTION
+   ========================================================================== */
+.btec-overview-section {
+    padding: 80px 8%;
+    background-color: #fafbfc;
+}
+
+.btec-overview-title {
+    font-family: var(--font-headings);
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--dark-navy);
+    margin-bottom: 48px;
+    text-align: left;
+}
+
+/* Top Row: Two Large Yellow Cards */
+.btec-large-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.large-yellow-card {
+    background: linear-gradient(135deg, var(--color-yellow-start) 0%, var(--color-yellow-end) 100%);
+    border-radius: 16px;
+    padding: 56px 40px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(238, 185, 2, 0.15);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.large-yellow-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(238, 185, 2, 0.25);
+}
+
+/* Subtle background wave patterns representing premium quality */
+.large-yellow-card::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(21, 28, 45, 0.04);
+    border-radius: 50%;
+    top: -70px;
+    left: -70px;
+    pointer-events: none;
+}
+
+.large-yellow-card::after {
+    content: '';
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(21, 28, 45, 0.03);
+    border-radius: 40%;
+    bottom: -100px;
+    right: -100px;
+    pointer-events: none;
+}
+
+.yellow-card-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--dark-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-bottom: 24px;
+    font-size: 2.2rem;
+    color: var(--dark-navy);
+    z-index: 2;
+}
+
+.large-yellow-card h3 {
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark-navy);
+    margin-bottom: 16px;
+    z-index: 2;
+}
+
+.large-yellow-card p {
+    font-size: 0.95rem;
+    color: rgba(21, 28, 45, 0.85);
+    line-height: 1.6;
+    max-width: 360px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+/* Bottom Row: 4 Small Cards */
+.btec-small-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.btec-small-card {
+    background-color: #ffffff;
+    border: 1px solid #eef1f6;
+    border-radius: 12px;
+    padding: 36px 24px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(21, 28, 45, 0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.btec-small-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(21, 28, 45, 0.08);
+}
+
+/* Dynamic Top Borders */
+.btec-small-card.border-teal {
+    border-top: 4px solid var(--color-teal-end);
+}
+
+.btec-small-card.border-pink {
+    border-top: 4px solid var(--color-pink-end);
+}
+
+.btec-small-card.border-yellow {
+    border-top: 4px solid var(--color-yellow-end);
+}
+
+.btec-small-card.border-pink-dark {
+    border-top: 4px solid var(--color-pink-dark-end);
+}
+
+/* Icon Wrappers with tint backgrounds */
+.small-card-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+}
+
+.bg-teal-icon {
+    background-color: rgba(26, 164, 149, 0.1);
+    color: var(--color-teal-end);
+}
+
+.bg-pink-icon {
+    background-color: rgba(236, 59, 131, 0.1);
+    color: var(--color-pink-end);
+}
+
+.bg-yellow-icon {
+    background-color: rgba(238, 185, 2, 0.12);
+    color: var(--color-yellow-end);
+}
+
+.bg-pink-dark-icon {
+    background-color: rgba(190, 24, 93, 0.1);
+    color: var(--color-pink-dark-end);
+}
+
+.btec-small-card h4 {
+    font-family: var(--font-headings);
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+/* Color Classes matching titles */
+.color-teal {
+    color: var(--color-teal-end);
+}
+
+.color-pink {
+    color: var(--color-pink-end);
+}
+
+.color-yellow {
+    color: var(--color-yellow-end);
+}
+
+.color-pink-dark {
+    color: var(--color-pink-dark-end);
+}
+
+.btec-small-card p {
+    font-size: 0.85rem;
+    color: var(--light-slate);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   4. TAKE A VIRTUAL TOUR SECTION
+   ========================================================================== */
+.virtual-tour-section {
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
+
+.virtual-tour-container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.virtual-tour-left .tour-title {
+    font-family: var(--font-headings);
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--dark-navy);
+    margin-bottom: 16px;
+}
+
+.virtual-tour-left .tour-subtitle {
+    font-size: 1.05rem;
+    color: var(--light-slate);
+    margin-bottom: 32px;
+}
+
+.tour-checklist {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.tour-checklist li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1rem;
+    color: var(--dark-navy);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.tour-checklist .check-icon {
+    font-size: 1rem;
+    color: var(--primary-blue);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tour-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    border: none;
+    padding: 16px 36px;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(0, 162, 232, 0.2);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.tour-btn i {
+    font-size: 0.85rem;
+    transition: transform 0.2s ease;
+}
+
+.tour-btn:hover {
+    background-color: var(--primary-blue-hover);
+    box-shadow: 0 8px 25px rgba(0, 162, 232, 0.3);
+    transform: translateY(-2px);
+}
+
+.tour-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* Right Side: Pink Excellence Card with absolute play button */
+.virtual-tour-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* Reusing excellence-card style structure but tailoring locally */
+.tour-excellence-card {
+    background: url('assets/Group 296.png') no-repeat right -250px top -40px / 140% auto, linear-gradient(135deg, var(--color-pink-start) 0%, var(--color-pink-end) 100%);
+    width: 100%;
+    max-width: 480px;
+    padding: 56px 40px 48px 40px;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -15px rgba(168, 32, 98, 0.35);
+    position: relative;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    overflow: hidden;
+}
+
+/* Play button positioned nicely next to title block */
+.video-play-overlay {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    z-index: 10;
+}
+
+.play-circle {
+    width: 54px;
+    height: 54px;
+    background-color: rgba(21, 28, 45, 0.85);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.play-circle i {
+    font-size: 1.15rem;
+    margin-left: 3px; /* visual alignment shift */
+    transition: color 0.3s ease;
+}
+
+.play-circle:hover {
+    transform: scale(1.1);
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 162, 232, 0.4);
+}
+
+.excellence-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-hero-num {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.num-large {
+    font-family: var(--font-headings);
+    font-size: 7rem;
+    font-weight: 300;
+    line-height: 0.8;
+    letter-spacing: -2px;
+}
+
+.num-text {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.card-subhead {
+    font-family: var(--font-headings);
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    line-height: 1.1;
+}
+
+.card-tagline {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.excellence-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.stat-box {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.25) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.stat-num {
+    font-family: var(--font-headings);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.stat-label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   5. SPECIALIZED CAREER PATHWAY BANNER
+   ========================================================================== */
+.pathway-banner-section {
+    position: relative;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('assets/offers_bg.png') no-repeat center center / cover;
+    overflow: hidden;
+}
+
+.pathway-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(21, 28, 45, 0.72), rgba(21, 28, 45, 0.82));
+    z-index: 1;
+}
+
+.pathway-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.pathway-banner-content h2 {
+    font-family: var(--font-headings);
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.pathway-banner-content p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   6. BOTTOM STATS STRIP SECTION
+   ========================================================================== */
+.stats-strip-section {
+    padding: 24px 8%;
+    background-color: #ffffff;
+}
+
+.stats-strip-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.strip-card {
+    border-radius: 12px;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    justify-content: center;
+    min-height: 160px;
+    box-shadow: 0 8px 20px rgba(21, 28, 45, 0.03);
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+}
+
+.strip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(21, 28, 45, 0.08);
+}
+
+/* Background dynamic circle overlays on stats strip cards */
+.strip-card::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    top: -20px;
+    right: -20px;
+}
+
+.strip-card.bg-pink {
+    background: linear-gradient(135deg, var(--color-pink-start) 0%, var(--color-pink-end) 100%);
+}
+
+.strip-card.bg-yellow {
+    background: linear-gradient(135deg, var(--color-yellow-start) 0%, var(--color-yellow-end) 100%);
+}
+
+.strip-card.bg-teal {
+    background: linear-gradient(135deg, var(--color-teal-start) 0%, var(--color-teal-end) 100%);
+}
+
+/* Contrast adjustment for Yellow Cards */
+.strip-card.bg-yellow {
+    color: var(--dark-navy);
+}
+
+.strip-card.bg-yellow::before {
+    background: rgba(21, 28, 45, 0.05);
+}
+
+.strip-icon {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.strip-num {
+    font-family: var(--font-headings);
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.strip-label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Custom styling for satisfaction card with text instead of number */
+.strip-card:last-child .strip-num {
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.3;
+    max-width: 120px;
+    margin-bottom: 0;
+    margin-top: 4px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .purpose-hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    
+    .split-info-section,
+    .btec-overview-section,
+    .virtual-tour-section,
+    .stats-strip-section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .purpose-hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .virtual-tour-container {
+        gap: 50px;
+    }
+    
+    .tour-excellence-card {
+        padding: 44px 30px;
+    }
+    
+    .video-play-overlay {
+        top: 45px;
+        right: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .purpose-page {
+        margin-top: 80px;
+    }
+    
+    .purpose-hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .split-info-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .split-info-left {
+        text-align: center;
+    }
+    
+    .split-info-left .section-desc {
+        max-width: 100%;
+    }
+    
+    .btec-large-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .btec-small-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .virtual-tour-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .virtual-tour-left {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tour-checklist li {
+        justify-content: center;
+    }
+    
+    .stats-strip-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .strip-card:nth-child(4),
+    .strip-card:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .purpose-hero-title {
+        font-size: 2.3rem;
+    }
+    
+    .split-info-right {
+        grid-template-columns: 1fr;
+    }
+    
+    .pathway-banner-section {
+        height: 300px;
+    }
+    
+    .pathway-banner-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .pathway-banner-content p {
+        font-size: 1rem;
+    }
+    
+    .stats-strip-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .strip-card:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .purpose-page {
+        margin-top: 70px;
+    }
+    
+    .purpose-hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .split-info-section,
+    .btec-overview-section,
+    .virtual-tour-section,
+    .stats-strip-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .purpose-hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .purpose-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .btec-small-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .stats-strip-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .strip-card:last-child {
+        grid-column: span 1;
+    }
+    
+    .yellow-card-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    
+    .large-yellow-card {
+        padding: 40px 20px;
+    }
+    
+    .large-yellow-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .tour-excellence-card {
+        padding: 36px 20px;
+    }
+    
+    .num-large {
+        font-size: 5rem;
+    }
+    
+    .num-text {
+        font-size: 1rem;
+    }
+    
+    .card-subhead {
+        font-size: 1.4rem;
+    }
+    
+    .video-play-overlay {
+        top: 35px;
+        right: 20px;
+    }
+    
+    .play-circle {
+        width: 44px;
+        height: 44px;
+    }
+}
