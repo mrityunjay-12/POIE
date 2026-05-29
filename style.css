@@ -2075,28 +2075,85 @@ nav ul li a:hover {
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;
   min-height: 320px;
-  
 
-  gap: 30px;
+  gap: 80px;
   align-items: center;
+}
+.btec-content-right h2 {
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+.btec-content-right p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.btec-benefits-list li {
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #000000;
 }
 
 /* Yellow Card */
+/* Yellow Graduate Admission Card */
+
 .btec-yellow-card {
   background: #f5c400;
-
-  padding: 60px 50px;
-
-  border-radius: 16px;
-
-  color: var(--dark-navy);
-
+  color: #071225;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 1 / 0.78;
+  padding: 55px 45px;
+  border-radius: 8px;
+  text-align: center;
   box-shadow: var(--card-shadow);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.yellow-icon-circle {
+  width: 72px;
+  height: 72px;
+  border: 2px solid #071225;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
 
+.yellow-icon-circle i {
+  font-size: 34px;
+  color: #071225;
+}
+
+.btec-yellow-card h3 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #071225;
+}
+
+.btec-yellow-card p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #071225;
+}
 /* =====================================================
    COURSE OUTLINE
+===================================================== */
+
+/* =====================================================
+   COURSE OUTLINE - IMAGE STYLE
 ===================================================== */
 
 .btec-course-outline {
@@ -2104,8 +2161,94 @@ nav ul li a:hover {
 }
 
 .btec-course-outline h2 {
-  font-size: 32px;
+  font-family: var(--font-headings);
+  font-size: 36px;
   font-weight: 900;
+  color: var(--dark-navy);
+  margin-bottom: 6px;
+}
+
+.btec-course-outline > p {
+  color: var(--light-slate);
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+.btec-outline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.btec-outline-card {
+  background: #ffffff;
+  border: 1px solid #e8ebf0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(21, 28, 45, 0.05);
+  padding: 0;
+  min-height: 210px;
+}
+
+.btec-outline-icon {
+  height: 135px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0;
+  border-radius: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.btec-outline-icon i {
+  font-size: 44px;
+  color: #ffffff;
+}
+
+.btec-outline-content {
+  background: #ffffff;
+  padding: 18px 18px 22px;
+  text-align: center;
+}
+
+.btec-outline-content h4 {
+  font-family: var(--font-headings);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 5px;
+}
+
+.btec-outline-content p {
+  font-size: 13px;
+  color: var(--light-slate);
+  line-height: 1.4;
+}
+.btec-outline-icon.teal {
+  background: linear-gradient(135deg, #0f8f83 0%, #054d48 100%);
+}
+
+.btec-outline-icon.pink {
+  background: linear-gradient(135deg, #f0438c 0%, #a82964 100%);
+}
+
+.btec-outline-icon.yellow {
+  background: linear-gradient(135deg, #ffd800 0%, #b69600 100%);
+}
+/* title colors */
+.btec-outline-card:nth-child(1) h4 {
+  color: #078f80;
+}
+
+.btec-outline-card:nth-child(2) h4,
+.btec-outline-card:nth-child(4) h4 {
+  color: #cf2b78;
+}
+
+.btec-outline-card:nth-child(3) h4 {
+  color: #c59f00;
 }
 
 /* Grid Layout */
@@ -2485,4 +2628,16 @@ nav ul li a:hover {
   .footer-title {
     margin-bottom: 16px;
   }
+}
+
+.graduate-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.graduate-title i {
+  font-size: 32px;
 }
