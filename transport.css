@@ -975,21 +975,19 @@
    FULL WIDTH BANNER
 ===================================================== */
 
+/* =====================================================
+   FULL WIDTH BANNER
+===================================================== */
+
 .btec-banner {
-
   margin-top: 35px;
-
-  padding: 130px 8%;
-
+  padding: 90px 8%;
   text-align: center;
-
   color: white;
-
   background:
     linear-gradient(rgba(21,28,45,0.78),
     rgba(21,28,45,0.78)),
     url("assets/offers_bg.png");
-
   background-size: cover;
   background-position: center;
 }
@@ -998,6 +996,7 @@
   font-size: 36px;
   font-weight: 900;
 }
+
 
 
 /* =====================================================
