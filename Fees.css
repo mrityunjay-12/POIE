@@ -310,9 +310,9 @@ nav ul li a:hover {
   text-align: right;
 }
 
-/* Find Us */
+/* Contact Admission Department */
 .find-section {
-  margin-top: 44px;
+  margin-top: 60px;
   position: relative;
 }
 
@@ -320,12 +320,16 @@ nav ul li a:hover {
   font-size: 42px;
   font-weight: 900;
   margin-bottom: 18px;
+  text-align: center;
 }
 
 .find-section>p {
-  color: #202333;
+  color: #6b6b7d;
   font-size: 15px;
-  margin-bottom: 18px;
+  margin: 0 auto 36px;
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.6;
 }
 
 .contact-grid {
@@ -335,58 +339,78 @@ nav ul li a:hover {
 }
 
 .contact-card {
-  min-height: 170px;
-  padding: 28px 22px;
-  text-align: center;
+  padding: 35px 25px;
+  border-radius: 16px;
   color: white;
+  text-align: center;
+  min-height: 180px;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(21, 28, 45, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-card::after {
   content: "";
   position: absolute;
-  right: -25px;
-  top: 28px;
-  width: 120px;
-  height: 120px;
+  right: -35px;
+  bottom: -35px;
+  width: 135px;
+  height: 135px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.08);
-
+  background: rgba(255, 255, 255, 0.12);
+  z-index: 1;
 }
 
-.contact-card i {
-  font-size: 34px;
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 2;
+.contact-card::before {
+  content: "";
+  position: absolute;
+  right: 38px;
+  bottom: 30px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  z-index: 1;
 }
 
-.contact-card h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
-  position: relative;
-  z-index: 2;
-}
-
+.contact-card .contact-icon-circle,
+.contact-card h3,
 .contact-card p {
-  font-size: 13px;
-  line-height: 1.5;
   position: relative;
   z-index: 2;
+}
+
+.contact-icon-circle {
+  width: 54px;
+  height: 54px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.contact-icon-circle i {
+  font-size: 22px;
 }
 
 .pink {
-  background: #cf2b78;
+  background: linear-gradient(135deg, #f0438c 0%, #a82964 100%);
 }
 
 .yellow {
-  background: #f5c400;
+  background: linear-gradient(135deg, #ffd800 0%, #b69600 100%);
+  color: #ffffff;
 }
 
 .green {
-  background: #078f80;
+  background: linear-gradient(135deg, #0f8f83 0%, #054d48 100%);
 }
 
 @media (max-width: 992px) {
