@@ -2809,6 +2809,7 @@ nav ul li a:hover {
 
 .accommodation-table{
     width:100%;
+    min-width:650px;
     border-collapse:collapse;
     text-align:center;
 }
@@ -3042,3 +3043,4 @@ nav ul li a:hover {
         min-height:260px;
     }
 }
+
