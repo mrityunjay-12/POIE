@@ -1379,20 +1379,20 @@
     margin-bottom: 10px;
 }
 
-.visa-benefits-list {
+.btec-benefits-list {
     list-style: none;
     padding: 0;
     margin-top: 5px;
 }
 
-.visa-benefits-list li {
+.btec-benefits-list li {
     position: relative;
     padding-left: 20px;
     margin-bottom: 8px;
     line-height: 1.6;
 }
 
-.visa-benefits-list li::before {
+.btec-benefits-list li::before {
     content: "✓";
     position: absolute;
     left: 0;
