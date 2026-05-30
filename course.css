@@ -1333,43 +1333,6 @@
   font-size: 13px;
 }
 
-/* BTEC yellow section below overview */
-
-.btec-yellow-block {
-  padding: 30px 0 50px;
-  margin-top: 0;
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 150px;
-  align-items: center;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.btec-yellow-card {
-    width: 380px;
-    height: 340px;
-
-    padding: 40px 30px;
-    border-radius: 8px;
-}
-
-.btec-content-right {
-  max-width: 620px;
-  
-}
-
-.btec-content-right h2 {
-  font-size: 30px;
-  line-height: 1.15;
-  margin-bottom: 12px;
-}
-
-.btec-content-right p,
-.btec-benefits-list li {
-  font-size: 12.5px;
-  line-height: 1.6;
-  
-}
 /* VISA PAGE ONLY */
 
 .visa-content-right p {
@@ -1379,46 +1342,6 @@
     margin-bottom: 10px;
 }
 
-.btec-benefits-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 5px;
-}
-
-.btec-benefits-list li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 8px;
-    line-height: 1.6;
-}
-
-.btec-benefits-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #078f80;
-    font-weight: bold;
-}
-/* Visa/About Yellow Card Override */
-
-.btec-yellow-card .yellow-icon-circle {
-    width: 58px;
-    height: 58px;
-    margin-bottom: 22px;
-}
-
-.btec-yellow-card .yellow-icon-circle i {
-    font-size: 24px;
-}
-.btec-yellow-card h3 {
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.3;
-    color: var(--dark-navy);
-    margin-top: 15px;
-    margin-bottom: 30px;
-}
 /* =====================================================
    VISA PROCESS SECTION
 ===================================================== */
@@ -1599,17 +1522,6 @@
 
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .btec-yellow-block {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    justify-items: center;
-  }
-
-  .btec-yellow-card {
-    margin: 0 auto;
-  }
-}
 
 @media (max-width: 992px) {
   .visa-process-grid {
@@ -1631,4 +1543,191 @@
   .attestation-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* Excellence Section Styles */
+.excellence-section {
+  padding: 60px 8%;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.excellence-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  /* Adjusted column proportions to match screenshot width ratios */
+  gap: 60px;
+  /* Aligned horizontal gaps */
+  align-items: center;
+  width: 100%;
+}
+
+/* Left Side: Pink/Magenta Card & Waves */
+.excellence-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.wave-bg-img {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 420%;
+  height: 420%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+.excellence-card {
+  background: url('assets/Group 296.png') no-repeat right -250px top -40px / 140% auto, linear-gradient(135deg, #ec3b83 0%, #a82062 100%);
+  width: 100%;
+  max-width: 520px;
+  padding: 56px 40px 48px 40px;
+  border-radius: 16px;
+  /* High fidelity exact rounded corner */
+  box-shadow: 0 30px 60px -20px rgba(168, 32, 98, 0.35);
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.card-hero-num {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.num-large {
+  font-family: var(--font-headings);
+  font-size: 7.5rem;
+  font-weight: 300;
+  line-height: 0.8;
+  letter-spacing: -2px;
+}
+
+.num-text {
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.card-subhead {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-top: 16px;
+  line-height: 1.1;
+}
+
+.card-tagline {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.excellence-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stat-box {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.25) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.stat-num {
+  font-family: var(--font-headings);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+/* Right Side: Narrative Details */
+.excellence-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.excellence-title {
+  font-family: var(--font-headings);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--dark-navy);
+  margin-bottom: 24px;
+}
+
+.excellence-desc {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--light-slate);
+  line-height: 1.8;
+  margin-bottom: 36px;
+  max-width: 600px;
+}
+
+.excellence-btn {
+  background-color: var(--primary-blue);
+  /* Light cyan button matching screenshot */
+  color: white;
+  border: none;
+  padding: 16px 36px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 0;
+  /* Modern square corner */
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(104, 210, 214, 0.2);
+  transition: all 0.3s ease;
+}
+
+.excellence-btn:hover {
+  background-color: #1c90bd;
+  box-shadow: 0 10px 20px rgba(104, 210, 214, 0.35);
+  transform: translateY(-2px);
+}
+
+.excellence-btn:active {
+  transform: translateY(0);
 }
